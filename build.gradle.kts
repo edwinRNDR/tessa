@@ -34,9 +34,10 @@ dependencies {
     implementation(libs.kotlin.reflect)
 
     implementation(libs.openrndr.application)
-    implementation(libs.openrndr.dds)
     implementation(libs.openrndr.draw)
-    implementation(libs.openrndr.webgl)
+    implementation(libs.orx.shapes)
+    implementation(libs.orx.svg)
+    implementation(libs.orx.composition)
 
     for (feature in orxFeatures) {
         implementation(orx(feature))
@@ -47,7 +48,7 @@ kotlin {
     js(IR) {
         browser {
             commonWebpackConfig {
-                outputFileName = "openrndr-program.js"
+                outputFileName = "TESSA.js"
                 cssSupport {
                     enabled.set(true)
                 }

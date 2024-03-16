@@ -1,25 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+<!<!doctype html>
 <head>
     <meta charset="UTF-8">
-    <title>OPENRNDR</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta property="og:image" content="thumbnail.png">
+    <meta property="og:title" content="Tilda Jakobs Bernacchi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Tessa Jakobs Bernacchi</title>
     <style>
-        body, html {
-            margin: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+        html {
         }
-        #openrndr-canvas {
-            display: block;
-            width: 100%;
+
+        body {
+            margin: 0 0 0 0;
+            font-family: 'Merriweather', serif;
+            user-select: none;
+        }
+
+        svg {
+            position: fixed;
+            width: 100vw;
             height: 100%;
         }
+
+        .outer-left {
+            left: 0;
+            top: 50%;
+            width: 0;
+            position: fixed;
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        .outer-right {
+            right: 0;
+            top: 50%;
+            width: 0;
+            position: fixed;
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        .outer-bottom {
+            position: fixed;
+            bottom: 0;
+            height: 25px;
+            width: 100%;
+        }
+
+        .outer-top {
+            position: fixed;
+            top: 0;
+            height: 25px;
+            width: 100%;
+        }
+
+        .inner {
+            font-size: 20px;
+            color: #223f4e;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        .inner-horizontal {
+            font-size: 20px;
+            color: #223f4e;
+            text-align: center;
+        }
+
+        .rotate-left {
+            transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+        }
+
+        .rotate-right {
+            transform: translateX(-50%) translateY(-50%) rotate(90deg);
+        }
+
     </style>
 </head>
 <body>
-<canvas id="openrndr-canvas"></canvas>
-<script src="openrndr-program.js"></script>
+<svg id="kotlin-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"
+     style="background: linear-gradient(0deg, #224d5f, #7eb1c6 100%); touch-action: none;">
+
+    <defs>
+        <linearGradient id="background-gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stop-color="red"/>
+            <stop offset="50%" stop-color="black" stop-opacity="0"/>
+            <stop offset="100%" stop-color="blue"/>
+        </linearGradient>
+    </defs>
+
+
+    <g id="inner-svg"></g>
+</svg>
+
+<div class="outer-left">
+    <div class="inner rotate-left">3170g&nbsp;/&nbsp;49cm</div>
+</div>
+
+<div class="outer-right">
+    <div class="inner rotate-right">43.84°N&nbsp;10.53°E</div>
+</div>
+
+<div class="outer-bottom">
+    <div class="inner-horizontal" style="color: #7eb1c67f">17 February 2023 / 15:00</div>
+</div>
+
+<div class="outer-top">
+    <div class="inner-horizontal">Tessa Jakobs Bernacchi</div>
+</div>
+
+<script src="TESSA.js"></script>
 </body>
 </html>

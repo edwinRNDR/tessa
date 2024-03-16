@@ -1,7 +1,7 @@
 [versions]
-kotlin = "1.8.10"
-openrndr = "0.4.2"
-orx = "0.4.2"
+kotlin = "1.9.23"
+openrndr = "0.4.5-SNAPSHOT"
+orx = "0.4.5-SNAPSHOT"
 
 [libraries]
 kotlin-reflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect", version.ref = "kotlin" }
@@ -10,6 +10,10 @@ openrndr-application = { group = "org.openrndr", name = "openrndr-application", 
 openrndr-dds = { group = "org.openrndr", name = "openrndr-dds", version.ref = "openrndr" }
 openrndr-draw = { group = "org.openrndr", name = "openrndr-draw", version.ref = "openrndr" }
 openrndr-webgl = { group = "org.openrndr", name = "openrndr-webgl", version.ref = "openrndr" }
+
+orx-svg = { group = "org.openrndr.extra", name = "orx-svg", version.ref = "openrndr" }
+orx-composition = { group = "org.openrndr.extra", name = "orx-composition", version.ref = "openrndr" }
+orx-shapes = { group = "org.openrndr.extra", name = "orx-shapes", version.ref = "openrndr" }
 
 [plugins]
 kotlin-js = { id = "org.jetbrains.kotlin.js", version.ref = "kotlin" }
